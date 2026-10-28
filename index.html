@@ -8,25 +8,21 @@
 <header class="top"><div><div class="brand">СИМВОЛ</div><div class="sub">PERSONAL INTERIOR STUDIO</div></div><div class="actions"><button class="btn" id="export">Экспорт JSON ↗</button><button class="btn primary" id="save">Сохранить</button></div></header>
 <div class="layout"><aside class="left"><div class="kicker">Рабочее пространство</div><h1 class="title">Квартира<br>«Символ»</h1><p class="muted">Интерактивный редактор дизайн-проекта</p><div class="rule"></div><div class="kicker">Помещения · 08</div><div class="rooms" id="rooms"></div><div class="rule"></div><p class="muted">Данные и площади перенесены из экспликации исходного проекта.</p></aside>
 <main><div class="head"><div><div class="kicker">Планировка · редактор</div><h2 id="mainTitle">Кухня-гостиная</h2></div><button class="btn" id="reset">Сбросить комнату</button></div>
-<div class="canvas"><div class="plan"><svg id="plan" viewBox="200 45 700 910" role="img" aria-label="Векторный план, привязанный к листу 09 проекта: расположение помещений, стен и проёмов">
-<path d="M334 91 L882 59 L882 547 L655 547 L655 752 L651 752 L651 931 L239 931 Q220 914 220 875 L220 205 Q220 122 334 91Z" fill="#f8f5ed" stroke="#5e605b" stroke-width="13" stroke-linejoin="round"/>
-<path class="zone" data-id="5" d="M336 119 L673 99 L673 374 L652 385 L652 474 L380 474 L380 452 L254 452 L254 205 Q254 138 336 119Z" fill="#c9aa80"/>
-<path class="zone" data-id="6" d="M691 97 L868 87 L868 290 L691 290Z" fill="#d2c9ba"/>
-<path class="zone" data-id="7" d="M691 298 L868 298 L868 403 L691 403Z" fill="#d9c8ae"/>
-<path class="zone" data-id="8" d="M691 411 L868 411 L868 530 L691 530Z" fill="#d0cec3"/>
-<path class="zone" data-id="4" d="M254 480 L509 480 L509 690 L254 690Z" fill="#d9c8ae"/>
-<path class="zone" data-id="3" d="M254 702 L509 702 L509 915 L272 915 Q254 915 254 896Z" fill="#d9c8ae"/>
-<path class="zone" data-id="1" d="M520 390 L679 390 L679 540 L654 540 L654 753 L616 753 L616 850 L520 850Z" fill="#d0cec3"/>
-<path class="zone" data-id="2" d="M520 857 L615 857 L615 915 L520 915Z" fill="#d0cec3"/>
-<!-- Несущие и межкомнатные стены, показанные на плане -->
-<g fill="none" stroke="#4e514e" stroke-width="9" stroke-linejoin="miter"><path d="M680 94 V377 M686 290 H870 M686 406 H870 M686 535 H875 M513 473 V527 M513 557 V695 M513 699 V849 M513 881 V917 M252 695 H514 M380 475 H513 M651 380 H682 M651 529 V617 M651 674 V753"/></g>
-<!-- Проёмы: тонкие белые разрывы и дуги открытия -->
-<g fill="none" stroke="#faf9f4" stroke-width="12"><path d="M513 528 V558 M513 850 V881 M651 617 V674 M686 320 V364 M686 467 V515 M818 290 H861"/></g>
-<g fill="none" stroke="#777a72" stroke-width="2.5"><path d="M513 528 H562 A49 49 0 0 1 513 577 M513 850 H563 A50 50 0 0 0 513 900 M651 617 L708 617 A57 57 0 0 1 651 674 M686 320 L732 320 A46 46 0 0 0 686 366 M686 467 L731 467 A45 45 0 0 1 686 512 M818 290 V247 A43 43 0 0 1 861 290"/></g>
-<!-- Оконные проёмы в фасадных стенах -->
-<g stroke="#7cabb9" stroke-width="7"><path d="M226 345 V423 M226 548 V645 M226 766 V863 M506 81 L605 75 M713 68 L807 63"/></g>
-<g class="labels"><text class="label" x="450" y="235">Кухня-гостиная</text><text class="area" x="450" y="258">44,80 м²</text><text class="label" x="778" y="181">Мастер-спальня</text><text class="area" x="778" y="205">12,20 м²</text><text class="label" x="778" y="345">Гардероб</text><text class="area" x="778" y="367">5,60 м²</text><text class="label" x="778" y="463">Мастер-ванная</text><text class="area" x="778" y="486">5,80 м²</text><text class="label" x="379" y="570">Детская 2</text><text class="area" x="379" y="593">16,00 м²</text><text class="label" x="379" y="790">Детская 1</text><text class="area" x="379" y="813">16,50 м²</text><text class="label" x="585" y="630">Прихожая</text><text class="area" x="585" y="652">12,20 м²</text><text class="label" x="566" y="885">Коридор</text><text class="area" x="566" y="904">5,50 м²</text></g>
-</svg></div><div class="caption">ПЕРЕРИСОВКА С ЛИСТА 09 · НЕ ДЛЯ СТРОИТЕЛЬНЫХ РАЗМЕРОВ</div></div>
+<div class="canvas"><div class="plan"><svg id="plan" viewBox="190 35 735 925" role="img" aria-label="План квартиры по исходному листу 07">
+<path d="M330 78 L506 63 L610 61 L710 57 L883 58 L883 291 L866 291 L866 547 L655 547 L655 752 L650 752 L650 930 L239 930 Q220 915 220 875 L220 205 Q220 120 330 78Z" fill="#f8f5ed" stroke="#555852" stroke-width="10" stroke-linejoin="round"/>
+<path class="zone" data-id="5" d="M331 99 L676 80 L676 292 L653 292 L653 387 L506 387 L506 475 L253 475 L253 205 Q253 139 331 99Z" fill="#c9aa80"/>
+<path class="zone" data-id="6" d="M692 82 L866 79 L866 290 L692 290Z" fill="#d2c9ba"/>
+<path class="zone" data-id="7" d="M692 300 L866 300 L866 390 L692 390Z" fill="#d9c8ae"/>
+<path class="zone" data-id="8" d="M692 400 L866 400 L866 535 L655 535 L655 389 L692 389Z" fill="#d0cec3"/>
+<path class="zone" data-id="4" d="M253 478 L506 478 L506 691 L253 691Z" fill="#d9c8ae"/>
+<path class="zone" data-id="3" d="M253 702 L506 702 L506 915 L270 915 Q253 915 253 894Z" fill="#d9c8ae"/>
+<path class="zone" data-id="1" d="M515 389 L650 389 L650 547 L632 547 L632 751 L615 751 L615 850 L515 850 L515 702 L506 702 L506 478 L515 478Z" fill="#d0cec3"/>
+<path class="zone" data-id="2" d="M515 858 L615 858 L615 915 L515 915Z" fill="#d0cec3"/>
+<g fill="none" stroke="#555852" stroke-width="7" stroke-linejoin="miter"><path d="M680 82 V292 M687 292 H868 M687 390 H868 M654 535 H868"/><path d="M253 475 H506 M506 475 V525 M506 555 V691 M253 697 H506 M506 702 V850 M506 882 V915"/><path d="M515 389 H653 M653 389 V430 M653 470 V535 M632 547 V610 M632 660 V751 M515 850 H615"/></g>
+<g stroke="#6f9ca6" stroke-width="5" fill="none"><path d="M221 320 V424 M221 550 V646 M221 770 V864 M506 66 H607 M710 59 H810"/></g>
+<g fill="none" stroke="#faf9f4" stroke-width="10"><path d="M506 525 V555 M506 850 V882 M653 430 V470 M687 320 V362 M687 430 V468 M632 610 V660"/></g>
+<g fill="none" stroke="#85877f" stroke-width="2.2"><path d="M506 525 H536 A30 30 0 0 1 506 555 M506 850 H538 A32 32 0 0 0 506 882 M653 430 H693 A40 40 0 0 1 653 470 M687 320 H725 A38 38 0 0 0 687 358 M687 430 H725 A38 38 0 0 1 687 468 M632 610 H672 A40 40 0 0 1 632 650"/></g>
+<g class="labels"><text class="label" x="440" y="230">Кухня-гостиная</text><text class="area" x="440" y="252">44,80 м²</text><text class="label" x="780" y="178">Мастер-спальня</text><text class="area" x="780" y="200">12,20 м²</text><text class="label" x="780" y="338">Мастер-гардероб</text><text class="area" x="780" y="360">5,60 м²</text><text class="label" x="780" y="460">Мастер-ванная</text><text class="area" x="780" y="482">5,80 м²</text><text class="label" x="380" y="570">Детская 2</text><text class="area" x="380" y="592">16,00 м²</text><text class="label" x="380" y="790">Детская 1</text><text class="area" x="380" y="812">16,50 м²</text><text class="label" x="570" y="630">Прихожая</text><text class="area" x="570" y="652">12,20 м²</text><text class="label" x="565" y="887">Коридор</text><text class="area" x="565" y="906">5,50 м²</text></g></svg></div><div class="caption">ПЕРЕРИСОВКА С ЛИСТА 09 · НЕ ДЛЯ СТРОИТЕЛЬНЫХ РАЗМЕРОВ</div></div>
 <div class="stats"><div class="stat"><span>Площадь по экспликации</span><strong>118,60 м²</strong></div><div class="stat"><span>После монтажных работ*</span><strong>120,0 м²</strong></div><div class="stat"><span>Помещений</span><strong>08</strong></div><div class="stat"><span>Высота</span><strong>3,48 м</strong></div></div></main>
 <aside class="right"><header><div class="kicker">Настройка помещения</div><h2 class="panel-title" id="detailTitle">Кухня-гостиная</h2><p class="muted" id="detailDesc">Помещение 05 · 44,80 м²</p></header>
 <label class="field" for="floor">Отделка пола</label><select class="select" id="floor"><option value="oak">Инженерная доска · натуральный дуб</option><option value="stone">Керамогранит · тёплый известняк</option><option value="micro">Микроцемент · greige</option><option value="dark">Дуб · дымчатый</option></select>
