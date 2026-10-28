@@ -20,4 +20,4 @@
 
 ## Публикация
 
-В репозитории предусмотрен GitHub Actions workflow для развёртывания через GitHub Pages. В настройках репозитория откройте **Settings → Pages** и выберите **GitHub Actions** в качестве источника публикации.
+GitHub Actions автоматически публикует приложение в GitHub Pages при обновлении ветки `main`. Адрес после успешного развёртывания: https://vyihawk.github.io/Symbol/
