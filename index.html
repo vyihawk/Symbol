@@ -8,27 +8,18 @@
 <header class="top"><div><div class="brand">СИМВОЛ</div><div class="sub">PERSONAL INTERIOR STUDIO</div></div><div class="actions"><button class="btn" id="export">Экспорт JSON ↗</button><button class="btn primary" id="save">Сохранить</button></div></header>
 <div class="layout"><aside class="left"><div class="kicker">Рабочее пространство</div><h1 class="title">Квартира<br>«Символ»</h1><p class="muted">Интерактивный редактор дизайн-проекта</p><div class="rule"></div><div class="kicker">Помещения · 08</div><div class="rooms" id="rooms"></div><div class="rule"></div><p class="muted">Данные и площади перенесены из экспликации исходного проекта.</p></aside>
 <main><div class="head"><div><div class="kicker">Планировка · редактор</div><h2 id="mainTitle">Кухня-гостиная</h2></div><button class="btn" id="reset">Сбросить комнату</button></div>
-<div class="canvas"><div class="plan"><svg id="plan" viewBox="0 0 700 850" role="img" aria-label="Схема помещений по исходному листу 07, геометрия пока ориентировочная">
-<path d="M90 25 H625 V270 H620 V340 H625 V500 H535 V535 H625 V655 H485 V700 H450 V810 H105 Q45 810 45 750 V110 Q45 40 90 25Z" fill="#f8f5ed" stroke="#77776b" stroke-width="7"/>
-<!-- Кухня-гостиная: верхняя левая часть исходного плана -->
-<path class="zone" data-id="5" d="M95 80 Q95 55 125 55 H415 V325 H365 V385 H95Z" fill="#c9aa80"/>
-<text class="label" x="245" y="175">Кухня-гостиная</text><text class="area" x="245" y="198">44,80 м²</text>
-<!-- Мастер-зона: верх справа -->
-<path class="zone" data-id="6" d="M425 55 H620 V265 H425Z" fill="#d2c9ba"/><text class="label" x="522" y="145">Мастер-спальня</text><text class="area" x="522" y="168">12,20 м²</text>
-<path class="zone" data-id="7" d="M425 275 H620 V365 H425Z" fill="#d9c8ae"/><text class="label" x="522" y="310">Мастер-гардероб</text><text class="area" x="522" y="332">5,60 м²</text>
-<path class="zone" data-id="8" d="M425 375 H620 V495 H535 V520 H425Z" fill="#d0cec3"/><text class="label" x="515" y="430">Мастер-ванная</text><text class="area" x="515" y="452">5,80 м²</text>
-<!-- Детские расположены одна под другой вдоль левой стороны -->
-<path class="zone" data-id="4" d="M95 395 H365 V565 H95Z" fill="#d9c8ae"/><text class="label" x="230" y="465">Детская 2</text><text class="area" x="230" y="488">16,00 м²</text>
-<path class="zone" data-id="3" d="M95 575 H365 V770 H95 Q70 770 70 740 V610 Q70 575 95 575Z" fill="#d9c8ae"/><text class="label" x="220" y="655">Детская 1</text><text class="area" x="220" y="678">16,50 м²</text>
-<!-- Центральная ось: прихожая и коридор -->
-<path class="zone" data-id="1" d="M375 395 H415 V770 H375 V810 H300 V770 H365 V575 H375Z" fill="#d0cec3"/><text class="label" x="375" y="610" transform="rotate(-90 375 610)">Прихожая · 12,20 м²</text>
-<path class="zone" data-id="2" d="M370 775 H445 V810 H370Z" fill="#d0cec3"/><text class="label" x="408" y="792">Коридор</text><text class="area" x="408" y="805">5,50 м²</text>
-<!-- Контуры мебели условные, без претензии на размерную точность -->
-<g pointer-events="none" opacity=".72" stroke="#a89e8c" fill="#eee7da" stroke-width="1.5">
-<rect x="130" y="105" width="120" height="58" rx="5"/><rect x="270" y="115" width="95" height="100" rx="5"/>
-<rect x="450" y="85" width="145" height="105" rx="5"/><rect x="455" y="285" width="130" height="28" rx="3"/>
-<rect x="135" y="435" width="155" height="85" rx="5"/><rect x="130" y="615" width="155" height="95" rx="5"/>
-</g></svg></div><div class="caption">СХЕМА ДЛЯ ВЫБОРА ПОМЕЩЕНИЙ · НЕ В МАСШТАБЕ</div></div>
+<div class="canvas"><div class="plan"><svg id="plan" viewBox="0 0 700 850" role="img" aria-label="Схематическая перерисовка листа 07 исходного плана">
+<path d="M150 35 L585 20 L590 260 L590 455 L525 455 L525 485 L485 485 L485 600 L455 600 L455 790 L155 790 Q95 790 95 730 L95 130 Q95 65 150 35Z" fill="#f8f5ed" stroke="#77776b" stroke-width="6" stroke-linejoin="round"/>
+<path class="zone" data-id="5" d="M150 55 L410 45 L410 270 L390 300 L330 300 L330 385 L115 385 L115 135 Q115 80 150 55Z" fill="#c9aa80"/><text class="label" x="245" y="175">Кухня-гостиная</text><text class="area" x="245" y="198">44,80 м²</text>
+<path class="zone" data-id="6" d="M430 45 L565 40 L570 250 L430 250Z" fill="#d2c9ba"/><text class="label" x="500" y="135">Мастер-спальня</text><text class="area" x="500" y="158">12,20 м²</text>
+<path class="zone" data-id="7" d="M430 265 L570 265 L570 325 L430 325Z" fill="#d9c8ae"/><text class="label" x="500" y="290">Мастер-гардероб</text><text class="area" x="500" y="312">5,60 м²</text>
+<path class="zone" data-id="8" d="M430 340 L570 340 L570 450 L510 450 L510 470 L430 470Z" fill="#d0cec3"/><text class="label" x="500" y="390">Мастер-ванная</text><text class="area" x="500" y="413">5,80 м²</text>
+<path class="zone" data-id="4" d="M115 405 L325 405 L325 555 L115 555Z" fill="#d9c8ae"/><text class="label" x="220" y="465">Детская 2</text><text class="area" x="220" y="488">16,00 м²</text>
+<path class="zone" data-id="3" d="M115 570 L325 570 L325 770 L155 770 Q115 770 115 725Z" fill="#d9c8ae"/><text class="label" x="220" y="650">Детская 1</text><text class="area" x="220" y="673">16,50 м²</text>
+<path class="zone" data-id="1" d="M335 310 L410 310 L410 470 L450 470 L450 585 L425 585 L425 725 L335 725 L335 570 L325 570 L325 405 L335 385Z" fill="#d0cec3"/><text class="label" x="375" y="530" transform="rotate(-90 375 530)">Прихожая · 12,20 м²</text>
+<path class="zone" data-id="2" d="M335 730 L425 730 L425 770 L335 770Z" fill="#d0cec3"/><text class="label" x="380" y="745">Коридор</text><text class="area" x="380" y="763">5,50 м²</text>
+<g pointer-events="none" opacity=".72" stroke="#a89e8c" fill="#eee7da" stroke-width="1.5"><rect x="175" y="105" width="95" height="60" rx="5"/><rect x="285" y="115" width="100" height="115" rx="5"/><rect x="445" y="80" width="105" height="100" rx="4"/><rect x="440" y="275" width="110" height="18" rx="3"/><rect x="145" y="435" width="130" height="80" rx="4"/><rect x="145" y="610" width="140" height="95" rx="4"/></g>
+<g stroke="#6f9ca6" stroke-width="5" fill="none"><path d="M100 190 V270 M100 440 V510 M100 610 V680 M285 30 H330 M455 25 H500"/></g></svg></div><div class="caption">КОНТУР СВЕРЕН С ЛИСТОМ 07 · ГЕОМЕТРИЯ СХЕМАТИЧЕСКАЯ</div></div>
 <div class="stats"><div class="stat"><span>Площадь по экспликации</span><strong>118,60 м²</strong></div><div class="stat"><span>После монтажных работ*</span><strong>120,0 м²</strong></div><div class="stat"><span>Помещений</span><strong>08</strong></div><div class="stat"><span>Высота</span><strong>3,48 м</strong></div></div></main>
 <aside class="right"><header><div class="kicker">Настройка помещения</div><h2 class="panel-title" id="detailTitle">Кухня-гостиная</h2><p class="muted" id="detailDesc">Помещение 05 · 44,80 м²</p></header>
 <label class="field" for="floor">Отделка пола</label><select class="select" id="floor"><option value="oak">Инженерная доска · натуральный дуб</option><option value="stone">Керамогранит · тёплый известняк</option><option value="micro">Микроцемент · greige</option><option value="dark">Дуб · дымчатый</option></select>
