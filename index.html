@@ -102,7 +102,7 @@
 <script>
 const base=[['Прихожая',12.2,'stone','warm','stone'],['Коридор',5.5,'oak','warm','oak'],['Детская 1',16.5,'oak','sage','oak'],['Детская 2',16,'oak','greige','oak'],['Кухня-гостиная',44.8,'oak','warm','oak'],['Мастер-спальня',12.2,'oak','greige','oak'],['Мастер-гардероб',5.6,'oak','warm','oak'],['Мастер-ванная',5.8,'stone','greige','stone']];
 const rooms=base.map((x,i)=>({id:i+1,name:x[0],area:x[1],floor:x[2],wall:x[3],color:x[4],light:true,ambient:true,furniture:true,dimensions:false}));let selected=5;let activeView='2d';
-const $=s=>document.querySelector(s),$=s=>[...document.querySelectorAll(s)],fmt=n=>n.toLocaleString('ru-RU',{minimumFractionDigits:2,maximumFractionDigits:2});
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)],fmt=n=>n.toLocaleString('ru-RU',{minimumFractionDigits:2,maximumFractionDigits:2});
 function toast(t){$('#toast').textContent=t;$('#toast').classList.add('show');setTimeout(()=>$('#toast').classList.remove('show'),2200)}
 function current(){return rooms[selected-1]}
 function renderRooms(){$('#rooms').innerHTML=rooms.map(r=>'<button class="room '+(r.id===selected?'active':'')+'" data-room="'+r.id+'"><small>'+String(r.id).padStart(2,'0')+'</small><span>'+r.name+'</span><small>'+fmt(r.area)+'</small></button>').join('');$('[data-room]').forEach(b=>b.onclick=()=>choose(+b.dataset.room))}
