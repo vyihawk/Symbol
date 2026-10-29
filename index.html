@@ -22,9 +22,9 @@
 @media(max-width:700px){.top{height:60px;padding:0 12px}.brand{font-size:15px}.sub{font-size:8px}.actions .btn{padding:8px;font-size:11px}.layout{display:flex;flex-direction:column}.left{display:none}main{padding:14px 10px}.head h2{font-size:22px}.canvas{min-height:360px}.plan{padding:7px}.stats{grid-template-columns:repeat(2,1fr)}.right{display:block;padding:18px 14px}.right header,.right .rule,.right .note{display:block}}
 </style></head><body>
 <header class="top"><div><div class="brand">СИМВОЛ</div><div class="sub">PERSONAL INTERIOR STUDIO</div></div><div class="actions"><button class="btn" id="export">Экспорт JSON ↗</button><button class="btn primary" id="save">Сохранить</button></div></header>
-<div class="layout"><aside class="left"><div class="kicker">Рабочее пространство</div><h1 class="title">Квартира<br>«Символ»</h1><p class="muted">Интерактивный редактор дизайн-проекта</p><div class="rule"></div><div class="kicker">Помещения · 08</div><div class="rooms" id="rooms"></div><div class="rule"></div><p class="muted">Данные и площади перенесены из экспликации исходного проекта.</p></aside>
-<main><div class="head"><div><div class="kicker">Планировка · редактор</div><h2 id="mainTitle">Кухня-гостиная</h2></div><div style="display:flex;gap:7px;align-items:center"><div class="view-switch"><button class="btn active" id="view2d">2D</button><button class="btn" id="view3d">3D</button></div><button class="btn" id="reset">Сбросить комнату</button></div></div>
-<div class="canvas"><div class="plan"><svg id="plan" viewBox="190 35 735 925" role="img" aria-label="План квартиры по исходному листу 07">
+<div class="layout"><aside class="left"><div class="kicker">Рабочее пространство</div><h1 class="title">Квартира<br>«Символ»</h1><p class="muted">Интерактивный редактор дизайн-проекта</p><div class="rule"></div><div class="kicker">Помещения · 08</div><div class="rooms" id="rooms"></div><div class="rule"></div><p class="muted">Площади — из экспликации. Контуры, проёмы и мебель реконструируются по листу 07 исходного проекта.</p></aside>
+<main><div class="head"><div><div class="kicker">Лист 07 · расстановка мебели</div><h2 id="mainTitle">Кухня-гостиная</h2></div><div style="display:flex;gap:7px;align-items:center"><div class="view-switch"><button class="btn active" id="view2d">2D</button><button class="btn" id="view3d">3D</button></div><button class="btn" id="reset">Сбросить комнату</button></div></div>
+<div class="canvas"><div class="plan"><svg id="plan" viewBox="190 35 735 925" role="img" aria-label="Планировка и расстановка мебели по исходному листу 07">
 <path d="M330 78 L506 63 L610 61 L710 57 L883 58 L883 291 L866 291 L866 547 L655 547 L655 752 L650 752 L650 930 L239 930 Q220 915 220 875 L220 205 Q220 120 330 78Z" fill="#f8f5ed" stroke="#555852" stroke-width="10" stroke-linejoin="round"/>
 <path class="zone" data-id="5" d="M331 99 L676 80 L676 292 L653 292 L653 387 L506 387 L506 475 L253 475 L253 205 Q253 139 331 99Z" fill="#c9aa80"/>
 <path class="zone" data-id="6" d="M692 82 L866 79 L866 290 L692 290Z" fill="#d2c9ba"/>
@@ -40,19 +40,25 @@
 <g fill="none" stroke="#85877f" stroke-width="2.2"><path d="M506 525 H536 A30 30 0 0 1 506 555 M506 850 H538 A32 32 0 0 0 506 882 M653 430 H693 A40 40 0 0 1 653 470 M687 320 H725 A38 38 0 0 0 687 358 M687 430 H725 A38 38 0 0 1 687 468 M632 610 H672 A40 40 0 0 1 632 650"/></g>
 <g class="labels"><text class="label" x="440" y="230">Кухня-гостиная</text><text class="area" x="440" y="252">44,80 м²</text><text class="label" x="780" y="178">Мастер-спальня</text><text class="area" x="780" y="200">12,20 м²</text><text class="label" x="780" y="338">Мастер-гардероб</text><text class="area" x="780" y="360">5,60 м²</text><text class="label" x="780" y="460">Мастер-ванная</text><text class="area" x="780" y="482">5,80 м²</text><text class="label" x="380" y="570">Детская 2</text><text class="area" x="380" y="592">16,00 м²</text><text class="label" x="380" y="790">Детская 1</text><text class="area" x="380" y="812">16,50 м²</text><text class="label" x="570" y="630">Прихожая</text><text class="area" x="570" y="652">12,20 м²</text><text class="label" x="565" y="887">Коридор</text><text class="area" x="565" y="906">5,50 м²</text></g>
 <g id="furnitureLayer" pointer-events="all" fill="#eee7da" stroke="#9b927f" stroke-width="1.8" opacity=".92">
-<!-- Furniture placements adjusted against visible furniture footprints on the source drawing; not yet dimensionally traced -->
+<!-- Расстановка сверена визуально с исходным листом 07; мебель и перегородки остаются векторной реконструкцией, не заменяют рабочий обмерный чертёж. -->
 <g data-furniture-room="5" class="furniture" tabindex="0" role="button" aria-label="Перемещаемая мебель кухни-гостиной">
-  <!-- dining table and six chairs -->
-  <rect x="332" y="148" width="108" height="58" rx="7"/>
-  <rect x="346" y="126" width="25" height="18" rx="8"/><rect x="399" y="126" width="25" height="18" rx="8"/>
-  <rect x="346" y="210" width="25" height="18" rx="8"/><rect x="399" y="210" width="25" height="18" rx="8"/>
-  <rect x="309" y="162" width="19" height="27" rx="8"/><rect x="444" y="162" width="19" height="27" rx="8"/>
-  <!-- sectional sofa -->
-  <path d="M523 132 Q523 123 533 123 H662 V291 H637 V166 H523Z"/>
-  <path d="M534 133 H649 V160 H534Z M534 169 H626 V280 H534Z"/>
-  <!-- kitchen island and cabinetry -->
-  <rect x="340" y="318" width="164" height="43" rx="2"/><path d="M380 318 V361 M420 318 V361 M460 318 V361"/>
-  <rect x="270" y="431" width="233" height="36" rx="2"/><path d="M316 431 V467 M362 431 V467 M408 431 V467 M454 431 V467"/>
+  <!-- Стол на шесть мест по исходному листу -->
+  <rect x="350" y="150" width="100" height="52" rx="5"/>
+  <rect x="362" y="128" width="22" height="18" rx="8"/><rect x="410" y="128" width="22" height="18" rx="8"/>
+  <rect x="362" y="206" width="22" height="18" rx="8"/><rect x="410" y="206" width="22" height="18" rx="8"/>
+  <rect x="328" y="162" width="18" height="25" rx="8"/><rect x="454" y="162" width="18" height="25" rx="8"/>
+  <!-- Угловой диван вдоль правой стены -->
+  <path d="M530 126 H651 V290 H626 V163 H530Z"/>
+  <path d="M538 134 H642 V157 H538Z M538 166 H619 V280 H538Z"/>
+  <path d="M564 166 V218 M592 166 V218 M538 195 H619" fill="none"/>
+  <!-- Кухонный остров и нижний ряд шкафов -->
+  <rect x="340" y="314" width="164" height="46" rx="2"/>
+  <path d="M400 314 V360 M450 314 V360"/>
+  <rect x="347" y="320" width="36" height="32" rx="1" fill="#d9d4c8"/>
+  <rect x="270" y="431" width="233" height="36" rx="2"/>
+  <path d="M316 431 V467 M362 431 V467 M408 431 V467 M454 431 V467"/>
+  <rect x="257" y="215" width="27" height="102" rx="1"/>
+  <path d="M257 248 H284 M257 282 H284"/>
 </g>
 <g data-furniture-room="6" class="furniture" tabindex="0" role="button" aria-label="Перемещаемая мебель мастер-спальни">
   <!-- master bed, bedside tables -->
