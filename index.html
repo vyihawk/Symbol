@@ -43,16 +43,16 @@
 <!-- Furniture placements adjusted against visible furniture footprints on the source drawing; not yet dimensionally traced -->
 <g data-furniture-room="5" class="furniture" tabindex="0" role="button" aria-label="Перемещаемая мебель кухни-гостиной">
   <!-- dining table and six chairs -->
-  <rect x="405" y="142" width="116" height="64" rx="7"/>
-  <rect x="424" y="119" width="27" height="20" rx="8"/><rect x="475" y="119" width="27" height="20" rx="8"/>
-  <rect x="424" y="210" width="27" height="20" rx="8"/><rect x="475" y="210" width="27" height="20" rx="8"/>
-  <rect x="382" y="160" width="20" height="28" rx="8"/><rect x="524" y="160" width="20" height="28" rx="8"/>
+  <rect x="332" y="148" width="108" height="58" rx="7"/>
+  <rect x="346" y="126" width="25" height="18" rx="8"/><rect x="399" y="126" width="25" height="18" rx="8"/>
+  <rect x="346" y="210" width="25" height="18" rx="8"/><rect x="399" y="210" width="25" height="18" rx="8"/>
+  <rect x="309" y="162" width="19" height="27" rx="8"/><rect x="444" y="162" width="19" height="27" rx="8"/>
   <!-- sectional sofa -->
-  <path d="M615 124 Q615 118 623 118 H655 V290 H627 V178 H615Z"/>
-  <path d="M625 128 H646 V166 H625Z M625 174 H618 V280 H625Z"/>
+  <path d="M523 132 Q523 123 533 123 H662 V291 H637 V166 H523Z"/>
+  <path d="M534 133 H649 V160 H534Z M534 169 H626 V280 H534Z"/>
   <!-- kitchen island and cabinetry -->
-  <rect x="335" y="318" width="178" height="45" rx="2"/><path d="M378 318 V363 M423 318 V363 M468 318 V363"/>
-  <rect x="274" y="433" width="225" height="37" rx="2"/><path d="M320 433 V470 M366 433 V470 M412 433 V470 M458 433 V470"/>
+  <rect x="340" y="318" width="164" height="43" rx="2"/><path d="M380 318 V361 M420 318 V361 M460 318 V361"/>
+  <rect x="270" y="431" width="233" height="36" rx="2"/><path d="M316 431 V467 M362 431 V467 M408 431 V467 M454 431 V467"/>
 </g>
 <g data-furniture-room="6" class="furniture" tabindex="0" role="button" aria-label="Перемещаемая мебель мастер-спальни">
   <!-- master bed, bedside tables -->
@@ -73,14 +73,14 @@
 </g>
 <g data-furniture-room="4" class="furniture" tabindex="0" role="button" aria-label="Перемещаемая мебель детской 2">
   <!-- child's room: bed, wardrobe, desk -->
-  <rect x="400" y="555" width="95" height="124" rx="3"/><rect x="407" y="562" width="81" height="27" rx="4"/>
-  <path d="M407 596 H488 V671 H407Z" fill="#e3ddd2"/>
+  <rect x="405" y="542" width="88" height="132" rx="3"/><rect x="412" y="549" width="74" height="27" rx="4"/>
+  <path d="M412 584 H486 V666 H412Z" fill="#e3ddd2"/>
   <rect x="270" y="493" width="218" height="25" rx="1"/><path d="M310 493 V518 M350 493 V518 M390 493 V518 M430 493 V518 M470 493 V518"/>
   <rect x="270" y="650" width="68" height="28" rx="2"/>
 </g>
 <g data-furniture-room="3" class="furniture" tabindex="0" role="button" aria-label="Перемещаемая мебель детской 1">
-  <rect x="400" y="755" width="95" height="124" rx="3"/><rect x="407" y="762" width="81" height="27" rx="4"/>
-  <path d="M407 796 H488 V871 H407Z" fill="#e3ddd2"/>
+  <rect x="405" y="742" width="88" height="132" rx="3"/><rect x="412" y="749" width="74" height="27" rx="4"/>
+  <path d="M412 784 H486 V866 H412Z" fill="#e3ddd2"/>
   <rect x="270" y="710" width="218" height="25" rx="1"/><path d="M310 710 V735 M350 710 V735 M390 710 V735 M430 710 V735 M470 710 V735"/>
   <rect x="270" y="850" width="68" height="28" rx="2"/>
 </g>
@@ -116,7 +116,7 @@ function renderToggles(){const r=current(),items=[['light','Основное о�
 $$('.zone').forEach(s=>s.onclick=()=>choose(+s.dataset.id));$('#floor').onchange=e=>{current().floor=e.target.value;current().color=e.target.value==='stone'?'stone':e.target.value==='dark'?'smoke':'oak';paint()};$('#wall').onchange=e=>{current().wall=e.target.value;toast('Отделка стен обновлена')};$$('[data-color]').forEach(b=>b.onclick=()=>{current().color=b.dataset.color;paint()});
 $('#reset').onclick=()=>{const b=base[selected-1];Object.assign(current(),{floor:b[2],wall:b[3],color:b[4],light:true,ambient:true,furniture:true,dimensions:false});choose(selected);toast('Настройки комнаты сброшены')};
 $('#all').onclick=()=>{const r=current();rooms.forEach(x=>{x.floor=r.floor;x.wall=r.wall;x.color=r.color;x.light=r.light;x.ambient=r.ambient});paint();toast('Отделка и свет применены ко всем')};
-function data(){return {project:'СИМВОЛ — Interior Studio',version:'0.3.0',updatedAt:new Date().toISOString(),selectedRoom:selected,furnitureTransforms:Object.fromEntries($('.furniture').map(g=>[g.dataset.furnitureRoom,g.getAttribute('transform')||''])),notes:'План и мебель визуально сверяются с листом 09. Расположение мебели скорректировано по видимым контурам на исходном листе. Точные координаты и геометрия стен ещё требуют размерной трассировки. Площади по экспликации 118,60 м²; общие данные после монтажных работ указывают 120,0 м².',rooms}}
+function data(){return {project:'СИМВОЛ — Interior Studio',version:'0.3.0',updatedAt:new Date().toISOString(),selectedRoom:selected,furnitureTransforms:Object.fromEntries($('.furniture').map(g=>[g.dataset.furnitureRoom,g.getAttribute('transform')||''])),notes:'План и мебель визуально сверяются с листом 09. Расстановка кухни-гостиной и детских скорректирована по листу 09. Перед рабочим ремонтом нужна точная размерная трассировка стен, проёмов и мебели. Площади по экспликации 118,60 м²; общие данные после монтажных работ указывают 120,0 м².',rooms}}
 $('#save').onclick=()=>{try{localStorage.setItem('symbol-design-studio',JSON.stringify(data()));toast('Проект сохранён в этом браузере')}catch(e){toast('Не удалось сохранить в браузере')}};
 $('#export').onclick=()=>{const a=document.createElement('a'),u=URL.createObjectURL(new Blob([JSON.stringify(data(),null,2)],{type:'application/json'}));a.href=u;a.download='symbol-design-project.json';a.click();URL.revokeObjectURL(u);toast('Экспорт JSON подготовлен')};
 
